@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
 </head>
 
 <body>
-    Hello Flask
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia inventore doloribus, error dolorum beatae non
-        consectetur quasi nobis harum commodi libero excepturi adipisci aliquam minus odio, laudantium quo. Saepe, at!
-    </p>
+    <h1> abount Me </h1>
     <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/abount">abount</a></li>
         <li><a href="admin">admin</a></li>
+    </ul>
+
+    <ul>
+        {% for item in products_list %}
+        <p> {{item}} </p>
+        {% endfor %}
     </ul>
 
 </body>

@@ -6,17 +6,20 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "<h1>Hello flask Framework</h1>"
+    data = {"name": "kan", "age": "18", "salary": "5000"}
+    return render_template("index.html", data=data)
 
 
 @app.route("/abount")
 def abount():
-    return "<h1>abount us </h1>"
+    products = ["A", "B", "C"]
+    return render_template("abount.html", products_list=products)
 
 
 @app.route("/admin")
 def admin():
-    return "<h1>!ADMIN! </h1>"
+    user = "kanjicool"
+    return render_template("admin.html", user_name=user)
 
 
 @app.route("/user/<name>/<age>")
