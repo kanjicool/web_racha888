@@ -6,14 +6,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    data = {"name": "kan", "age": "18", "salary": "5000"}
-    return render_template("index.html", data=data)
+    return render_template("index.html")
 
 
-@app.route("/abount")
+@app.route("/about")
 def abount():
-    products = ["A", "B", "C"]
-    return render_template("abount.html", products_list=products)
+    return render_template("about.html")
 
 
 @app.route("/admin")
@@ -22,9 +20,19 @@ def admin():
     return render_template("admin.html", user_name=user)
 
 
-@app.route("/user/<name>/<age>")
-def member(name, age):
-    return "<h1>name : {}, age : {}</h1>".format(name, age)
+@app.route("/user/<name>")
+def member(name):
+    return "<h1>name : {}</h1>".format(name)
+
+
+@app.route("/test")
+def test():
+    return render_template("test.html")
+
+
+@app.route("/top_up")
+def top_up():
+    return render_template("top_up.html")
 
 
 if __name__ == "__main__":
