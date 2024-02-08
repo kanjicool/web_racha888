@@ -2,5 +2,22 @@
 
 {% block content %}
 <h1>About</h1>
+<div class="countainer">
+    <h2>ติดต่อเจ้าหน้าที่</h2>
+    <form action="{{url_for('signupForm')}}" method="get">
+        <div class="form-group">
+            <label for="">ชื่อผู้ติดต่อ</label>
+            <input type="text" name="name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">รายละเอียด</label>
+            <textarea name="description" class="form-control" cols="30" row="10"></textarea>
+        </div>
+        <br>
+        <input type="submit" value="submit" class="btn btn-success">
 
+
+    </form>
+
+</div>
 {% endblock %}
