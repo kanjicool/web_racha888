@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rangers {% block title %}{% endblock title %}</title>
+    <title>Rangers</title>
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
     <link rel="stylesheet" href="{{url_for('core.static', filename='style.css')}}">
@@ -14,14 +14,14 @@
     <div class="container grid-md" id="wrapper">
         <header class="navbar pt-2 mt-2">
             <section class="navbar-section">
-                <a href="{{ url_for('core.home') }}" class="navbar-brand mr-2">
+                <a href="/" class="navbar-brand mr-2">
                     <strong>Rangers</strong>
                 </a>
-                <a href="{{ url_for('shop.main_shop') }}" class="btn btn-link">Shop</a>
-                <a href="{{ url_for('cart.cart_page') }}" class="btn btn-link">Cart</a>
+                <a href="/" class="btn btn-link">Shop</a>
+                <a href="#" class="btn btn-link">Cart</a>
             </section>
             <section class="navbar-section">
-                <form action="{{url_for('shop.search')}}">
+                <form action="#">
                     <div class="input-group input-inline">
                         <input class="form-input" type="text" name="query" placeholder="Search...">
                         <button class="btn btn-primary input-group-btn">
