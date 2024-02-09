@@ -1,8 +1,8 @@
-from flask import render_template, session, request, redirect, url_for
+from flask import Blueprint, render_template, request, session
 
-from shop import app, db
+shop = Blueprint("shop", __name__)
 
 
-@app.route("/")
-def home():
-    return "Home page of your shop"
+@shop.route("/details", methods=["POST", "GET"])
+def details():
+    return render_template("details.html")
