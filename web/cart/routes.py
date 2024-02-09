@@ -15,3 +15,6 @@ cart = Blueprint("cart", __name__)
 @cart.route("/cart")
 def cart_page():
     return render_template("cart.html")
+
+
+@
