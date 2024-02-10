@@ -1,24 +1,15 @@
-import os
-from flask import Flask, session
+from flask import Flask
 
-app = Flask(__name__, static_folder="images/")
+def create_app():
+    app = Flask(__name__)
+    app.config["SECRET_KEY"] = "kanjicool"
 
+    from .views import views
+    from .auth import auth
+    from .admin import admin
 
-# Flask database
-from flask_sqlalchemy import SQLAlchemy
+    app.register_blueprint(views, url_prefix="/")  # localhost:5000/about-us
+    app.register_blueprint(auth, url_prefix="/auth")  # localhost:5000/auth/change-password
+    app.register_blueprint(admin, url_prefix="/")
 
-app.config["SECRET_KEY"] = "kanjicool"
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(
-    os.getcwd(), "sqlite.db"
-)
-db = SQLAlchemy(app)
-
-# Flask blueprints
-from web.core.routes import core
-from web.shop.routes import shop
-from web.cart.routes import cart
-
-
-app.register_blueprint(core)
-app.register_blueprint(shop)
-app.register_blueprint(cart)
+    return app
