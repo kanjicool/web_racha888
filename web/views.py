@@ -26,3 +26,7 @@ def s2():
 @views.route("/s3")
 def s3():
     return render_template('s3.html')
+
+@views.route("/s4")
+def s4():
+    return render_template('s4.html')
