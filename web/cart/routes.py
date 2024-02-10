@@ -8,13 +8,11 @@ from flask import (
     request,
     flash,
 )
+from web import db
 
 cart = Blueprint("cart", __name__)
 
 
-@cart.route("/cart")
-def cart_page():
-    return render_template("cart.html")
-
-
-@
+# @cart.route("/cart", methods=["GET", "POST"])
+# def cart_page():
+#     return render_template("cart.html")
