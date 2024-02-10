@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 DB_NAME = 'database.sqlite3'
 
-def create_datebase():
+def create_database():
     db.create_all()
     print('Database Created')
 
@@ -26,7 +26,7 @@ def create_app():
     app.register_blueprint(admin, url_prefix="/")
 
     with app.app_context():
-        create_datebase()
+        create_database()
         
 
 
