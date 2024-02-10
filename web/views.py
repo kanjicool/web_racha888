@@ -42,3 +42,7 @@ def s6():
 @views.route("/s7")
 def s7():
     return render_template('s7.html')
+
+@views.route("/s8")
+def s8():
+    return render_template('s8.html')
