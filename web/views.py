@@ -30,3 +30,7 @@ def s3():
 @views.route("/s4")
 def s4():
     return render_template('s4.html')
+
+@views.route("/s5")
+def s5():
+    return render_template('s5.html')
