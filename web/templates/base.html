@@ -1,51 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rangers</title>
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
-    <link rel="stylesheet" href="{{url_for('core.static', filename='style.css')}}">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    
+    <script src="https://kit.fontawesome.com/e24507d923.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>Mug-Hot.exe | {% block title %} {% endblock %}</title> 
+
 </head>
-
-<body>
-    <div class="container grid-md" id="wrapper">
-        <header class="navbar pt-2 mt-2">
-            <section class="navbar-section">
-                <a href="/" class="navbar-brand mr-2">
-                    <strong>Rangers</strong>
-                </a>
-                <a href="/" class="btn btn-link">Home</a>
-                <a href="{{url_for('shop.main_shop')}}" class="btn btn-link">Shop</a>
-                <a href="/about" class="btn btn-link">Cart</a>
-            </section>
-            <section class="navbar-section">
-                <form action="#">
-                    <div class="input-group input-inline">
-                        <input class="form-input" type="text" name="query" placeholder="Search...">
-                        <button class="btn btn-primary input-group-btn">
-                            <i class="icon icon-search"></i>
-                        </button>
-                    </div>
-                </form>
-            </section>
-        </header>
-        <div class="page-transition">
-            <main>
-
-            </main>
-            <footer>
-                <div class="empty">
-                    <p class="empty-subtitle">@kanjicool</p>
-                </div>
-            </footer>
-        </div>
-    </div>
-    <script src="https://unpkg.com/htmx.org@1.9.5"
-        integrity="sha384-xcuj3WpfgjlKF+FXhSQFQ0ZNr39ln+hwjN3npfM9VBnUskLolQAcN80McRIVOPuO"
-        crossorigin="anonymous"></script>
+<body style="background-color: rgb(46, 46, 48);">
+    
 </body>
-
 </html>
