@@ -18,3 +18,7 @@ def contact():
 @views.route("/s1")
 def s1():
     return render_template('s1.html')
+
+@views.route("/s2")
+def s2():
+    return render_template('s1.html')
