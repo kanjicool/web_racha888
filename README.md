@@ -6,24 +6,25 @@ Web  Mug-Hot เว็ปซื้อของออน์ไลน์ เว็
 ## การติดตั้ง 
 ``` bash
 git clone https://github.com/kanjicool/web_racha888.git
-
+```
+```
 pip install -r requirement.txt
-
 ```
 ##  สร้าง Virtual Environment & Run
 
 windown
 ``` bash
 pip install virtualenv
-
+```
 py -m venv env
-
+```
 .\env\Scripts\Activate.ps1
 ```
 linux
 ``` bash
 python3 -m venv venv
-
+```
+```
 source venv/bin/activate
 ```
 Run
