@@ -1,2 +1,7 @@
 flask
 SQLAlchemy
+Jinja2
+requests
+Flask-WTF
+Flask-Login
+werkzeug
